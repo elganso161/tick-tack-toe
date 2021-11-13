@@ -14,6 +14,9 @@ for (let i = 0; i < cells.length; i++) {
     if (cells[i].innerHTML == "") {
       move % 2 == 0 ? (cells[i].innerHTML = "X") : (cells[i].innerHTML = "O");
       move % 2 == 0
+        ? (cells[i].style.color = "#b01c1c")
+        : (cells[i].style.color = "#1d25b5");
+      move % 2 == 0
         ? (mover.innerHTML = "сейчас ходят " + "O")
         : (mover.innerHTML = "сейчас ходят " + "X");
       playAudio("./assets/click.mp3");

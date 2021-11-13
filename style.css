@@ -98,3 +98,7 @@ th {
     display: block;
     text-align: center;
 }
+
+.cell {
+    font-size: 64px;
+}
