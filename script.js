@@ -22,6 +22,7 @@ for (let i = 0; i < cells.length; i++) {
       playAudio("./assets/click.mp3");
       move++;
       check();
+      console.log(move);
     }
   };
 }
@@ -38,6 +39,7 @@ const check = () => {
     [2, 4, 6],
   ];
   for (let i = 0; i < arr.length; i++) {
+    console.log(move);
     if (
       cells[arr[i][0]].innerHTML == "X" &&
       cells[arr[i][1]].innerHTML == "X" &&
@@ -54,6 +56,10 @@ const check = () => {
       popup.style.display = "flex";
       winner.innerHTML = "Победили нолики";
       playAudio("./assets/win.mp3");
+    } else if (move == 9) {
+      popup.style.display = "flex";
+      winner.innerHTML = "НИЧЬЯ";
+      playAudio("./assets/tie.mp3");
     }
   }
 };
